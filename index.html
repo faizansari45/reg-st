@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #000000;
+            align-content: center;
+            flex: auto;
+            height: 100%;
+        }
+
+        fieldset{
+            width: 200%;
+            max-width: 600px;
+            height: fit-content;
+            padding: 50px;
+            background-color: #08b8fd;
+            box-shadow: 0px 0pc 10px rgba(0,0,0,0.1);
+            border-radius: 20px;
+        }
+
+        legend{
+            text-align: center;
+            color: #0648fc;
+            margin-bottom: 15px;
+        }
+
+        label{
+            display: block;
+            margin-bottom: 10px;
+            color: #000000;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="password"],
+        select{
+            width: 100%;
+            padding: 10px;
+            border: 1px solid#ddd;
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="date"]:focus,
+        input[type="password"]:focus,
+        select:focus{
+            border-color: #4A90E2;
+        }
+
+        button{
+            text-align: center;
+            padding: 10px 20px;
+            background-color: #3184e4;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            align-content: center;
+            align-self: center;
+            align-items: center;
+            flex: auto;
+            margin: 15px 20px;
+        }
+
+        button:hover{
+            background-color: #0648fc;
+        }
+
+        div{
+            display: flex;
+            margin-right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="/submit_registration" method="post">
+      <fieldset>
+        <legend><h1> Student Information </h1></legend>
+
+        <label for="username"> Name </label>
+        <input type="text" id="username" placeholder="Enter Your Name" name="username" required><br>&nbsp;
+
+        <label for="date">D.O.B.</label>
+        <input type="date" id="date"><br>&nbsp;
+
+        <label for="roll_no.">Roll No.</label>
+        <input type="number" id="roll_no." pattern="[0-9]"><br>&nbsp;
+
+        <label>Gender:</label>
+        <div>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other">
+        <label for="other">Other</label><br>&nbsp;
+        </div>
+
+        <label>Hobbies:</label>
+        <div>
+        <input type="checkbox" id="chess" name="hobby" value="chess" required>
+        <label for="chess">Chess</label>
+        <input type="checkbox" id="cricket" name="hobby" value="cricket">
+        <label for="cricket">Cricket</label>
+        <input type="checkbox" id="ludo" name="hobby" value="ludo">
+        <label for="ludo">Ludo</label>
+        <input type="checkbox" id="uno" name="hobby" value="uno">
+        <label for="uno">Uno</label><br>&nbsp;
+        </div>
+
+        <label for="address">Address</label>
+        <input type="textarea" id="address" name="address" required><br>&nbsp;
+
+        <label for="selector">Select your Class</label>
+        <select name="number" id="selector">
+            <option value=" ">Select</option>
+            <option value="10">10th</option>
+            <option value="11">11th</option>
+            <option value="12">12th</option>
+        </select><br>&nbsp;
+
+        <label for="email">Enter your email</label>
+        <input type="email" id="email" name="email" required><br>&nbsp;
+
+        <label for="phone">Enter your Mobile no.</label>
+        <input type="number" id="phone" name="phone" pattern="[0-9]{10}" required><br>&nbsp;
+
+        <label for="file">Photograph</label>
+        <input type="file"><br>&nbsp;
+
+        <label for="password">Enter your password</label>
+        <input type="password" id="hidden"><br>&nbsp;
+
+        <button type="button" onclick="goToPrevPage()">Prev</button>&nbsp;
+        <button type="reset" value="reset">Reset</button>&nbsp;
+        <button type="submit" value="submit">Submit</button>&nbsp;
+      </fieldset>
+    </form>
+    <script>
+        function goToPrevPage(){
+            window.location.href = "abc.html";
+        }
+    </script>
+</body>
+</html>
